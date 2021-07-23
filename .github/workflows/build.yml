@@ -35,6 +35,7 @@ jobs:
         uses: azure/arm-deploy@v1
         with:
           scope: subscription
+          region: australiaeast
           subscriptionId: ${{ secrets.AZURE_SUBSCRIPTION }}
           template: ./deployAnalyticsPlatform.bicep
           parameters: resGroupName=bicepdemo synapseWorkspaceName=bicepwks synapseSqlAdministratorLogin=${{ secrets.SQL_ADMIN_LOGIN }} synapseSqlAdministratorLoginPassword=${{ secrets.SQL_ADMIN_PASSWORD }} storageName=bicep
